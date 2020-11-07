@@ -36,6 +36,16 @@ typedef struct {
     #define d1mach  d1mach_
 #endif
 
+/* MacOS FORTRAN calling convention */
+#ifdef __APPLE__
+    #define dn2g    dn2g_
+    #define dn2gb   dn2gb_
+    #define dn2f    dn2f_
+    #define dn2fb   dn2fb_
+    #define divset  divset_
+    #define d1mach  d1mach_
+#endif
+
 /* Windows FORTRAN calling convention */
 #ifdef _WIN32
     #define dn2g    DN2G
