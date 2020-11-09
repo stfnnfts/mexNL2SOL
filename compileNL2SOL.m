@@ -65,7 +65,7 @@ function compileNL2SOL()
     mex( '-c', '-largeArrayDims', '-lmwblas', '-lmwlapack', files{:} );
        
     if ( gfortran )
-        mex( '-largeArrayDims', '-lgfortran', '-lmwblas', '-lmwlapack', sprintf('%s/mexnl2sol.c', cpath), outFiles{:}, '-outdir', cpath);
+        mex( '-largeArrayDims', '-lgfortran', '-lmwblas', '-lmwlapack', '-lquadmath',  sprintf('%s/mexnl2sol.c', cpath), outFiles{:}, '-outdir', cpath);
     else
         mex( '-largeArrayDims', '-lmwblas', '-lmwlapack', sprintf('%s/mexnl2sol.c', cpath), outFiles{:}, '-outdir', cpath);
     end
