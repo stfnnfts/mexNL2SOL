@@ -12,3 +12,14 @@ Syntax is similar to lsqnonlin. [X,RESNORM,RESIDUAL,EXITFLAG,ITERATIONS,FEVALS,J
 Note however that the output struct of lsqnonlin is replaced with iterations and lambda with the number of function evaluations.
 
 If you have tested it on another MATLAB/OS combination, or find a bug in the code, please drop me a line, then I will update the code/wiki.
+
+## Precompiled binaries
+
+### Requirements for macOS binary
+
+Make sure gcc10 is installed. 
+
+E.g. install gcc10 with brew 
+> brew install gcc@10
+And create the following symbolic link: 
+> ln -s /usr/local/Cellar/gcc@10/10.3.0/lib/gcc/10/ /usr/local/opt/gcc/lib/gcc/10
